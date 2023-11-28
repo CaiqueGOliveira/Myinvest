@@ -45,7 +45,7 @@ const Cabecalho = ({ color }: CabecalhoProps) => {
                 <li 
                     className="h-1/5 py-2 px-5" 
                     onClick={() => {
-                        location("/ações");
+                        location("/acoes");
                     }}
                 >
                   Ações
