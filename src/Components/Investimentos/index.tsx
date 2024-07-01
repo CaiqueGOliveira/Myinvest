@@ -3,64 +3,149 @@ import SaldoCarteira from "../SaldoCarteira";
 import GraficoCarteira from "../GraficoCarteira";
 import ListagemAtivos from "../ListagemAtivos";
 
+
 type InvestimentosProps = {
       titulo: string;
+      tipoDaPagina: string,
 }
 
 
-const Investimentos = ({ titulo }: InvestimentosProps) => {
-      const [displaySaldo, setDisplaySaldo] = useState<'hidden' | 'block'>('hidden');
+const Investimentos = ({ titulo, tipoDaPagina }: InvestimentosProps) => {
+      const [displaySaldo, setDisplaySaldo] = useState<'opacity-0' | 'opacity-100'>('opacity-0');
 
       return (
-            <div className="w-full h-[87%]">
-                  <div className="w-full h-2/5 flex items-center justify-between px-14">
-                        <SaldoCarteira 
+            <div className="w-full h-[87%] flex flex-col gap-4">
+                  <div className="w-full h-1/3 flex justify-between">
+                        <SaldoCarteira
                               displaySaldo={displaySaldo}
                               setDisplaySaldo={setDisplaySaldo}
                               titulo={`Saldo em ${titulo}`}
                               saldo="0,00"
-                              width="w-1/3"
+                              width="w-1/2 max-w-[420px]"
+                              height="h-full"
                         />
 
-                        <GraficoCarteira width="w-2/5" height="h-full" bg="bg-white" />
+                        <GraficoCarteira 
+                              width="w-1/2 max-w-[420px]" 
+                              height="h-full" 
+                              bg="bg-white"
+                        />
                   </div>
 
-                  <div className="w-full h-3/5 px-14 flex items-center justify-between">
-                        <ListagemAtivos 
-                              Titulo="Sua Carteira"
-                        >
-                              <thead>
-                                    <tr className="bg-zinc-300 text-zinc-700 font-ptsans text-basemin">
-                                          <td className="w-1/4 pl-4 py-1">Nome</td>
-                                          <td className="w-1/4 py-1">Código</td>
-                                          <td className="w-1/4 py-1">Preço</td>
-                                          <td className="w-1/4 py-1">Quantidade</td>
-                                    </tr>
-                              </thead>
+                  <ListagemAtivos
+                        Titulo="Sua Carteira de ações"
+                        tipoDaPagina={tipoDaPagina}
+                  >
+                        <thead>
+                              <tr className="bg-primary">
+                                    <th scope="col" className="font-medium bg-primary text-white rounded-ltmd">
+                                          {tipoDaPagina}
+                                    </th>
+                                    <th scope="col" className="font-medium bg-primary text-white">
+                                          Código
+                                    </th>
+                                    <th scope="col" className="font-medium bg-primary text-white">
+                                          Preço
+                                    </th>
+                                    <th scope="col" className="font-medium bg-primary text-white">
+                                          Quantidade
+                                    </th>
+                                    <th scope="col" className="font-medium bg-primary text-white rounded-rtmd">
+                                          Total investido
+                                    </th>
+                              </tr>
+                        </thead>
 
-                              <tbody>
+                        <tbody>
+                              <tr>
+                                    <td>Banco do Brasil</td>
+                                    <td>BBAS3</td>
+                                    <td>R$: 22,50</td>
+                                    <td>40</td>
+                                    <td>900</td>
+                              </tr>
 
-                              </tbody>
-                        </ListagemAtivos>
+                              <tr>
+                                    <td>Klabin</td>
+                                    <td>KLBN3</td>
+                                    <td>R$: 4,65</td>
+                                    <td>120</td>
+                                    <td>558</td>
+                              </tr>
 
-                        <ListagemAtivos 
-                              Titulo="Adicionar Ação"
-                        >
-                               <thead>
-                                    <tr className="bg-zinc-300 text-zinc-700 font-ptsans text-basemin">
-                                          <td className="w-1/4 pl-4 py-1">Nome</td>
-                                          <td className="w-1/4 py-1">Código</td>
-                                          <td className="w-1/4 py-1">Preço</td>
-                                          <td className="w-1/4 py-1">Quantidade</td>
-                                    </tr>
-                              </thead>
+                              <tr>
+                                    <td>Banco Itau</td>
+                                    <td>ITB4N</td>
+                                    <td>R$: 10,50</td>
+                                    <td>60</td>
+                                    <td>630</td>
+                              </tr>
 
-                              <tbody>
-                                    
-                              </tbody>
+                              <tr>
+                                    <td>Banco do Brasil</td>
+                                    <td>BBAS3</td>
+                                    <td>R$: 22,50</td>
+                                    <td>40</td>
+                                    <td>900</td>
+                              </tr>
 
-                        </ListagemAtivos>
-                  </div>
+                              <tr>
+                                    <td>Klabin</td>
+                                    <td>KLBN3</td>
+                                    <td>R$: 4,65</td>
+                                    <td>120</td>
+                                    <td>558</td>
+                              </tr>
+
+                              <tr>
+                                    <td>Banco Itau</td>
+                                    <td>ITB4N</td>
+                                    <td>R$: 10,50</td>
+                                    <td>60</td>
+                                    <td>630</td>
+                              </tr>
+
+                              <tr>
+                                    <td>Banco do Brasil</td>
+                                    <td>BBAS3</td>
+                                    <td>R$: 22,50</td>
+                                    <td>40</td>
+                                    <td>900</td>
+                              </tr>
+
+                              <tr>
+                                    <td>Klabin</td>
+                                    <td>KLBN3</td>
+                                    <td>R$: 4,65</td>
+                                    <td>120</td>
+                                    <td>558</td>
+                              </tr>
+
+                              <tr>
+                                    <td>Banco Itau</td>
+                                    <td>ITB4N</td>
+                                    <td>R$: 10,50</td>
+                                    <td>60</td>
+                                    <td>630</td>
+                              </tr>
+
+                              <tr>
+                                    <td>Klabin</td>
+                                    <td>KLBN3</td>
+                                    <td>R$: 4,65</td>
+                                    <td>120</td>
+                                    <td>558</td>
+                              </tr>
+
+                              <tr>
+                                    <td>Banco Itau</td>
+                                    <td>ITB4N</td>
+                                    <td>R$: 10,50</td>
+                                    <td>60</td>
+                                    <td>630</td>
+                              </tr>
+                        </tbody>
+                  </ListagemAtivos>
             </div>
       )
 }

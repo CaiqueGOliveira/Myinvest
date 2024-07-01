@@ -2,10 +2,10 @@ import { useState } from 'react';
 import SaldoCarteira from "../SaldoCarteira";
 
 const Saldo = () => {
-      const [displaySaldo, setDisplaySaldo] = useState<'hidden' | 'block'>('hidden');
+      const [displaySaldo, setDisplaySaldo] = useState<'opacity-0' | 'opacity-100'>('opacity-0');
 
       return (
-            <div className='w-full h-[30%] flex justify-between px-5'>
+            <div className='w-full h-[30%] flex justify-between'>
                   <SaldoCarteira 
                         bg='sim'
                         titulo='Saldo atual'

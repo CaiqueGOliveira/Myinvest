@@ -15,7 +15,7 @@ const Cabecalho = ({ color }: CabecalhoProps) => {
       <header className={`min-h-[12vh] flex justify-between items-center px-5 ssm:px-10 relative lg:px-28 ${color == 'preto' ? 'border-b-[1px] border-black' : ''}`}
       >
           <h3
-            className={`${color == 'branco' ? 'text-white' : 'text-zinc-700 font-medium'} text-2.5xl cursor-pointer pb-2`}
+            className={`${color == 'branco' ? 'text-white' : 'text-zinc-700 font-medium'} text-2.5xl cursor-pointer pb-2 hover:text-zinc-300 transition-all`}
             onClick={() => {
               location("/");
             }}
@@ -95,17 +95,18 @@ const Cabecalho = ({ color }: CabecalhoProps) => {
 
 
           {/* Display >= 768px */}
-          <ul className={`${color == 'branco' ? 'text-white' : 'text-zinc-700'} h-full w-max text-base font-medium hidden lg:flex items-center gap-4 pt-2 mr-5 relative`}>
+          <ul className={`${color == 'branco' ? 'text-white' : 'text-zinc-700'} h-full w-max text-base font-medium hidden lg:flex items-center gap-10 pt-2 mr-5 relative`}>
             <li
-              className={`cursor-pointer hover:text-zinc-400`}
+              className={`cursor-pointer hover:text-zinc-400 transition-all`}
               onClick={() => {
                 location("/carteira");
               }}
             >
               Carteira
             </li>
+
             <li
-              className="cursor-pointer hover:text-zinc-400 group"
+              className="cursor-pointer hover:text-zinc-400 group transition-all"
               onMouseEnter={() => {setDesktopDropDown(true)}}
               onMouseLeave={() => {setDesktopDropDown(false)}}
             >
@@ -113,7 +114,7 @@ const Cabecalho = ({ color }: CabecalhoProps) => {
             </li>
 
             <ul
-              className={`${desktopDropDown ? 'block' : 'hidden'} ${color == 'branco' ? 'transparent' : 'bg-white z-20 border-[1px] border-black/25'} absolute top-8 right-[-39px] w-[86%] min-w-[150px] h-[200px] text-basemin rounded-lg`
+              className={`${desktopDropDown ? 'opacity-100' : 'opacity-0'} ${color == 'branco' ? 'transparent' : 'bg-white z-20 border-[1px] border-black/25'} absolute top-10 right-[-60px] w-[86%] min-w-[150px] h-[200px] text-basemin rounded-lg transition-all`
               }
               onMouseEnter={() => {setDesktopDropDown(true)}}
               onMouseLeave={() => {setDesktopDropDown(false)}}

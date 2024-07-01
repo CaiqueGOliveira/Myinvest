@@ -12,6 +12,27 @@
       @apply w-full h-[13%] flex items-center pl-3 rounded-lg cursor-pointer font-hind;
 }
 
-.header-nav-selected {
-      @apply bg-blue-600 text-zinc-50;
+.rounded-ltmd {
+      border-top-left-radius: '6px';
+}
+
+.rounded-rtmd {
+      border-top-right-radius: '6px';
+}
+
+.table-container::-webkit-scrollbar {
+      width: 6px;
+}
+
+.table-container::-webkit-scrollbar-track {
+      background: #FEFEFE;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+      background-color: #444;
+      border-radius: 6px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+      background-color: #666;
 }

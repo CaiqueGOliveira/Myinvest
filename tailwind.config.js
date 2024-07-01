@@ -24,8 +24,8 @@ export default {
       },
       backgroundColor: {
         'black/35': 'rgb(0 0 0 / 0.35)',
-        whiteLight: '#F6F6F6',
-        light: '#E7E7E7',
+        whiteLight: '#E9E9E9',
+        light: '#f9f9f9',
       },
       textColor: {
         light: '#FBFCF2',
@@ -35,7 +35,7 @@ export default {
         hind: "'Hind Siliguri', sans-serif",
         lora: "'Lora', serif",
         ptsans: "'PT Sans', sans-serif"
-      }
+      },
     },
   },
   plugins: [],

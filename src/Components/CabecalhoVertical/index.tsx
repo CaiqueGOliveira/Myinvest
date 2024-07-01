@@ -13,7 +13,7 @@ const CabecalhoVertical = () => {
   return (
       <header className="w-[18vw] h-screen bg-light py-10 flex flex-col items-center gap-10">
             <h3 
-              className="text-xl font-hind cursor-pointer"
+              className="text-xl font-hind font-semibold cursor-pointer"
               onClick={() => {navigate('/')}}
             >
               MyInvesting
@@ -21,7 +21,7 @@ const CabecalhoVertical = () => {
 
             <div className="w-5/6 h-3/5 flex flex-col justify-center gap-2">
                   <p 
-                    className={`header-nav ${location == "/carteira" ? 'header-nav-selected' : ''}`}
+                    className={`header-nav ${location == "/carteira" ? 'bg-primary text-white' : ''}`}
                     onClick={() => {navigate('/carteira')}}
                   >
                       <AiOutlineWallet />
@@ -29,7 +29,7 @@ const CabecalhoVertical = () => {
                   </p>
 
                   <p 
-                    className={`header-nav ${location == "/acoes" ? 'header-nav-selected' : ''}`}
+                    className={`header-nav ${location == "/acoes" ? 'bg-primary text-white' : ''}`}
                     onClick={() => {navigate('/acoes')}}
                   >
                       <TbZoomMoney />
@@ -37,7 +37,7 @@ const CabecalhoVertical = () => {
                   </p>
 
                   <p 
-                    className={`header-nav ${location == "/fiis" ? 'header-nav-selected' : ''}`}
+                    className={`header-nav ${location == "/fiis" ? 'bg-primary text-white' : ''}`}
                     onClick={() => {navigate('/fiis')}}
                   >
                       <TbBuildingCommunity />
@@ -45,7 +45,7 @@ const CabecalhoVertical = () => {
                   </p>
 
                   <p 
-                    className={`header-nav ${location == "/cripto" ? 'header-nav-selected' : ''}`}
+                    className={`header-nav ${location == "/cripto" ? 'bg-primary text-white' : ''}`}
                     onClick={() => {navigate('/cripto')}}
                   >
                       <RiMoneyDollarCircleLine />
@@ -53,7 +53,7 @@ const CabecalhoVertical = () => {
                   </p>
 
                   <p 
-                    className={`header-nav ${location == "/rendafixa" ? 'header-nav-selected' : ''}`}
+                    className={`header-nav ${location == "/rendafixa" ? 'bg-primary text-white' : ''}`}
                     onClick={() => {navigate('/rendafixa')}}
                   >
                      <TbPigMoney />
@@ -61,7 +61,7 @@ const CabecalhoVertical = () => {
                   </p>
 
                   <p 
-                    className={`header-nav ${location == "/exterior" ? 'header-nav-selected' : ''}`}
+                    className={`header-nav ${location == "/exterior" ? 'bg-primary text-white' : ''}`}
                     onClick={() => {navigate('/exterior')}}
                   >
                       <MdTravelExplore />

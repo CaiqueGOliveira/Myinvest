@@ -10,16 +10,20 @@ const Carteira = () => {
             <div className='flex'>
                   <CabecalhoVertical />
                   
-                  <main className='w-[82vw] h-screen bg-whiteLight'>
+                  <main className='w-[82vw] h-screen bg-whiteLight px-14 pb-8'>
                         <CabecalhoPrincipal titulo='Carteira'/>
 
-                        <section className='w-[95%] h-[87%] mx-auto flex flex-col justify-around gap-7'>
+                        <section className='w-full h-[87%] flex flex-col gap-5'>
                               <Saldo />
                         
-                              <div className='w-full h-[70%] flex justify-between px-5'>
+                              <div className='w-full h-[60%] flex justify-between'>
                                     <DivisaoAtivos />
 
-                                    <GraficoCarteira />
+                                    <GraficoCarteira 
+                                          width='w-[60%]'
+                                          height='h-full'
+                                          bg='bg-zinc-50'
+                                    />
                               </div>
                         </section>
                   </main>

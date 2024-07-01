@@ -5,7 +5,7 @@ import DivisaoGrafico from "../DivisaoGrafico";
 
 const DivisaoAtivos = () => {
   return (
-      <div className="w-[37%] h-[95%] bg-white rounded-md border-zinc-300 border-2 p-5">
+      <div className="w-[37%] h-full bg-white rounded-md border-zinc-300 border-2 p-5">
           <div className="w-full h-1/5">
             <h3 className="text-lg font-ptsans">Investimentos</h3>
             
