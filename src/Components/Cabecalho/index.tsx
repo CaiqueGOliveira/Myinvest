@@ -12,7 +12,7 @@ const Cabecalho = ({ color }: CabecalhoProps) => {
   const [desktopDropDown, setDesktopDropDown] = useState<boolean>(false);
 
   return (
-      <header className={`min-h-[12vh] flex justify-between items-center px-5 ssm:px-10 relative lg:px-28 ${color == 'preto' ? 'border-b-[1px] border-black' : ''}`}
+      <header className={`min-h-[12vh] flex justify-between items-center px-6 ssm:px-10 relative lg:px-28 ${color == 'preto' ? 'border-b-[1px] border-black' : ''}`}
       >
           <h3
             className={`${color == 'branco' ? 'text-white' : 'text-zinc-700 font-medium'} text-2.5xl cursor-pointer pb-2 hover:text-zinc-300 transition-all`}

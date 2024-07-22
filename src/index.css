@@ -9,7 +9,7 @@
 }
 
 .header-nav {
-      @apply w-full h-[13%] flex items-center pl-3 rounded-lg cursor-pointer font-hind;
+      @apply w-full h-[13%] flex items-center pl-3 rounded-lg cursor-pointer font-hind border-[1px] border-zinc-300;
 }
 
 .rounded-ltmd {

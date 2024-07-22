@@ -11,7 +11,7 @@ const CabecalhoVertical = () => {
   const navigate = useNavigate();
 
   return (
-      <header className="w-[18vw] h-screen bg-light py-10 flex flex-col items-center gap-10">
+      <header className="w-[15vw] max-w-[280px] h-screen bg-light py-10 flex flex-col items-center gap-10">
             <h3 
               className="text-xl font-hind font-semibold cursor-pointer"
               onClick={() => {navigate('/')}}

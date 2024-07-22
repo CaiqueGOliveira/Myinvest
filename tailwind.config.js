@@ -34,7 +34,8 @@ export default {
       fontFamily: {
         hind: "'Hind Siliguri', sans-serif",
         lora: "'Lora', serif",
-        ptsans: "'PT Sans', sans-serif"
+        ptsans: "'PT Sans', sans-serif",
+        redHat: "'Red Hat Display', sans-serif",
       },
     },
   },

@@ -7,7 +7,7 @@ type CabecalhoPrincipalProps = {
 
 const CabecalhoPrincipal = ({ titulo }: CabecalhoPrincipalProps) => {
   return (
-      <section className="w-full h-[13%] flex justify-between items-center">
+      <section className="w-full max-w-7xl h-[13%] flex justify-between items-center">
             <h4 className="text-xl font-semibold font-ptsans"> { titulo } </h4>
       
             <div className="w-max h-full flex items-center gap-5">

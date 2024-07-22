@@ -7,27 +7,35 @@ import ListagemAtivos from "../ListagemAtivos";
 type InvestimentosProps = {
       titulo: string;
       tipoDaPagina: string,
+      listaAtivos: {
+            id: number, 
+            nome: string, 
+            codigo: string, 
+            preco: string, 
+            quantidade: number, 
+            totalInvestido: string
+      }[],
 }
 
 
-const Investimentos = ({ titulo, tipoDaPagina }: InvestimentosProps) => {
+const Investimentos = ({ titulo, tipoDaPagina, listaAtivos }: InvestimentosProps) => {
       const [displaySaldo, setDisplaySaldo] = useState<'opacity-0' | 'opacity-100'>('opacity-0');
 
       return (
-            <div className="w-full h-[87%] flex flex-col gap-4">
-                  <div className="w-full h-1/3 flex justify-between">
+            <section className="w-full h-[87%] max-w-7xl flex flex-col xl:flex-row items-center gap-4">
+                  <div className="w-full max-w-7xl h-1/3 flex justify-between gap-3 xl:flex-col xl:h-[90%] xl:w-5/12">
                         <SaldoCarteira
                               displaySaldo={displaySaldo}
                               setDisplaySaldo={setDisplaySaldo}
                               titulo={`Saldo em ${titulo}`}
                               saldo="0,00"
-                              width="w-1/2 max-w-[420px]"
-                              height="h-full"
+                              width="w-1/2 max-w-[420px] xl:w-full xl:max-w-xl"
+                              height="h-full xl:h-[45%]"
                         />
 
                         <GraficoCarteira 
-                              width="w-1/2 max-w-[420px]" 
-                              height="h-full" 
+                              width="w-1/2 max-w-[420px] xl:w-full xl:max-w-xl" 
+                              height="h-full xl:h-[55%]" 
                               bg="bg-white"
                         />
                   </div>
@@ -57,96 +65,22 @@ const Investimentos = ({ titulo, tipoDaPagina }: InvestimentosProps) => {
                         </thead>
 
                         <tbody>
-                              <tr>
-                                    <td>Banco do Brasil</td>
-                                    <td>BBAS3</td>
-                                    <td>R$: 22,50</td>
-                                    <td>40</td>
-                                    <td>900</td>
-                              </tr>
-
-                              <tr>
-                                    <td>Klabin</td>
-                                    <td>KLBN3</td>
-                                    <td>R$: 4,65</td>
-                                    <td>120</td>
-                                    <td>558</td>
-                              </tr>
-
-                              <tr>
-                                    <td>Banco Itau</td>
-                                    <td>ITB4N</td>
-                                    <td>R$: 10,50</td>
-                                    <td>60</td>
-                                    <td>630</td>
-                              </tr>
-
-                              <tr>
-                                    <td>Banco do Brasil</td>
-                                    <td>BBAS3</td>
-                                    <td>R$: 22,50</td>
-                                    <td>40</td>
-                                    <td>900</td>
-                              </tr>
-
-                              <tr>
-                                    <td>Klabin</td>
-                                    <td>KLBN3</td>
-                                    <td>R$: 4,65</td>
-                                    <td>120</td>
-                                    <td>558</td>
-                              </tr>
-
-                              <tr>
-                                    <td>Banco Itau</td>
-                                    <td>ITB4N</td>
-                                    <td>R$: 10,50</td>
-                                    <td>60</td>
-                                    <td>630</td>
-                              </tr>
-
-                              <tr>
-                                    <td>Banco do Brasil</td>
-                                    <td>BBAS3</td>
-                                    <td>R$: 22,50</td>
-                                    <td>40</td>
-                                    <td>900</td>
-                              </tr>
-
-                              <tr>
-                                    <td>Klabin</td>
-                                    <td>KLBN3</td>
-                                    <td>R$: 4,65</td>
-                                    <td>120</td>
-                                    <td>558</td>
-                              </tr>
-
-                              <tr>
-                                    <td>Banco Itau</td>
-                                    <td>ITB4N</td>
-                                    <td>R$: 10,50</td>
-                                    <td>60</td>
-                                    <td>630</td>
-                              </tr>
-
-                              <tr>
-                                    <td>Klabin</td>
-                                    <td>KLBN3</td>
-                                    <td>R$: 4,65</td>
-                                    <td>120</td>
-                                    <td>558</td>
-                              </tr>
-
-                              <tr>
-                                    <td>Banco Itau</td>
-                                    <td>ITB4N</td>
-                                    <td>R$: 10,50</td>
-                                    <td>60</td>
-                                    <td>630</td>
-                              </tr>
+                              {
+                                    listaAtivos.map(linha => {
+                                          return (
+                                                <tr className="cursor-pointer" key={linha.id}>
+                                                      <td>{linha.nome}</td>
+                                                      <td>{linha.codigo}</td>
+                                                      <td>{linha.preco}</td>
+                                                      <td>{linha.quantidade}</td>
+                                                      <td>{linha.totalInvestido}</td>
+                                                </tr>
+                                          );
+                                    })
+                              }
                         </tbody>
                   </ListagemAtivos>
-            </div>
+            </section>
       )
 }
 

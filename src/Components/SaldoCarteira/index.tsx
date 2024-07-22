@@ -15,19 +15,19 @@ const SaldoCarteira = ({ bg='não', titulo, saldo='0,00', displaySaldo, setDispl
   
 
   return (
-    <div className={`${width} ${height} flex flex-col rounded-md border-2 border-zinc-200 p-4 ${bg == 'sim' ? 'bg-blue-600 text-zinc-50' : 'bg-white'}`}>
-            <div className='w-full h-1/2 flex justify-between'>
-              <div>
-                <h3 className='text-base font-ptsans'> { titulo } </h3>
-                <h3 className='text-lg font-hind flex'>R$ <span className={`${displaySaldo} ml-1 transition-all duration-100`}>{saldo}</span></h3>
-              </div>
+    <div className={`${width} ${height} flex flex-col rounded-md border-2 border-zinc-200 ${bg == 'sim' ? 'bg-blue-600 text-zinc-50' : 'bg-white'}`}>
+            <div className='w-full h-1/2 flex justify-between p-4'>
+                <div className='h-full'>
+                  <h3 className='text-base font-ptsans'> { titulo } </h3>
+                  <h3 className='mt-2 text-2xl font-hind flex'>R$ <span className={`${displaySaldo} ml-1 transition-all duration-100`}>{saldo}</span></h3>
+                </div>
 
-              <i 
-                className='w-7 h-7 mt-1 mr-1 cursor-pointer p-1 rounded-full hover:scale-125 transition-all duration-300'
-                onClick={() => {displaySaldo == 'opacity-100' ? setDisplaySaldo('opacity-0') : setDisplaySaldo('opacity-100')}}
-              >
-                <BsEyeSlashFill className="w-full h-full" />
-              </i>
+                <i 
+                  className='w-7 h-7 mt-1 mr-1 cursor-pointer p-1 rounded-full hover:scale-125 transition-all duration-300'
+                  onClick={() => {displaySaldo == 'opacity-100' ? setDisplaySaldo('opacity-0') : setDisplaySaldo('opacity-100')}}
+                >
+                  <BsEyeSlashFill className="w-full h-full" />
+                </i>
             </div>
     </div>
   )
