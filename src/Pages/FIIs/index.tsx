@@ -72,17 +72,20 @@ const FIIs = () => {
       
     ];
 
+    const valoresEvolucaoCarteira = [1, 3, 4, 29, 190, 290]
+
     return (
       <div className='flex'>
           <CabecalhoVertical />
 
-          <main className="w-[82vw] h-screen bg-whiteLight px-14 pb-8 flex flex-col items-center">
+          <main className="w-[85vw] h-screen bg-whiteLight px-14 pb-8 flex flex-col items-center">
                 <CabecalhoPrincipal titulo="Fundos Imobiliários"/>
 
                 <Investimentos 
-                  titulo='Fiis' 
-                  tipoDaPagina='Fundo Imobiliário' 
+                  titulo='em Fiis' 
+                  tipoDaPagina='Fundo Imobiliário'
                   listaAtivos={listaFundosImobiliarios}
+                  valoresEvolucaoCarteira={valoresEvolucaoCarteira}
                 />
           </main>
       </div> 

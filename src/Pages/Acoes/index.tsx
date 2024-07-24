@@ -72,17 +72,20 @@ const Acoes = () => {
       
     ];
 
+    const valoresEvolucaoCarteira = [1, 300, 700, 130, 100, 409, 190, 203, 1000];
+
     return (
       <div className='flex'>
           <CabecalhoVertical />
 
-          <main className="w-[82vw] h-screen bg-whiteLight px-14 pb-8 flex flex-col items-center">
+          <main className="w-[85vw] h-screen bg-whiteLight px-14 pb-8 flex flex-col items-center">
                 <CabecalhoPrincipal titulo="Ações" />
 
-                <Investimentos 
-                  titulo="ações" 
+                <Investimentos
+                  titulo="em Ações" 
                   tipoDaPagina="Ação" 
-                  listaAtivos={listaAcoes} 
+                  listaAtivos={listaAcoes}
+                  valoresEvolucaoCarteira={valoresEvolucaoCarteira}
                 />
           </main>
       </div>

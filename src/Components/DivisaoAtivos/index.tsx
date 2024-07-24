@@ -12,11 +12,11 @@ const DivisaoAtivos = ({ width="w-[30%] max-w-[380px]", height="h-full max-h-[38
   return (
       <div className={`${width} ${height} bg-white rounded-md border-zinc-300 border-2`}>
           <div className="w-full h-1/5 flex flex-col justify-center px-4">
-            <h3 className="font-ptsans">
+            <h3 className="font-ptsans font-semibold">
               Investimentos
             </h3>
             
-            <p className="text-sm font-hind text-zinc-400">Destribuição de ativos na carteira</p>
+            <p className="text-sm font-hind font-semibold text-zinc-400">Destribuição de ativos na carteira</p>
           </div>
 
           <div className="w-full h-4/5 flex px-4 pt-4">

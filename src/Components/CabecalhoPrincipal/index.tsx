@@ -21,4 +21,4 @@ const CabecalhoPrincipal = ({ titulo }: CabecalhoPrincipalProps) => {
   )
 }
 
-export default CabecalhoPrincipal
+export default CabecalhoPrincipal;

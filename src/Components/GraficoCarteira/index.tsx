@@ -7,16 +7,18 @@ type GraficoProps = {
   width?: string;
   height?: string;
   bg?: string;
+  marginTexto?: string;
+  valores: number[]
 }
 
-const GraficoCarteira = ({ width='w-full', height='h-1/2', bg='' }: GraficoProps) => {
+const GraficoCarteira = ({ width='w-full', height='h-1/2', bg='', marginTexto='', valores }: GraficoProps) => {
 
     const data: ChartData<'bar'> = {
-      labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Agos', 'Set', 'Out', 'Nov', 'Dez'],
+      labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
       datasets: [
         {
           label: 'Saldo da carteira',
-          data: [1, 3, 6, 4, 13, 22, 48],
+          data: valores,
           backgroundColor: [
             'rgba(30, 180, 10, 0.8)',
             'rgba(30, 180, 10, 0.8)',
@@ -61,12 +63,12 @@ const GraficoCarteira = ({ width='w-full', height='h-1/2', bg='' }: GraficoProps
     }
 
     return (
-        <div className={`${width} ${height} ${bg} flex-col gap-3 rounded-md border-zinc-300 border-2 pt-3 px-3`}>
-            <div className="flex flex-col mb-4">
-              <h3 className="text-base font-ptsans ">
+        <div className={`${width} ${height} ${bg} flex-col rounded-md border-zinc-300 border-2 pt-4 px-4 min-h-[250px] shadow-md`}>
+            <div className={`flex flex-col ${marginTexto}`}>
+              <h3 className="font-semibold font-ptsans leading-3">
                 Progressão
               </h3>
-              <p className="text-sm text-zinc-400">
+              <p className="text-sm font-semibold text-zinc-400">
                 Evolução mensal da carteira
               </p>
             </div>

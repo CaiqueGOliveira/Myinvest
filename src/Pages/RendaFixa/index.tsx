@@ -7,8 +7,9 @@ const RendaFixa = () => {
     <div className='flex'>
         <CabecalhoVertical />
 
-        <main className="w-[82vw] h-screen bg-whiteLight px-14 pb-8">
-              <CabecalhoPrincipal titulo="Renda Fixa" />
+        <main className="w-[85vw] h-screen bg-whiteLight px-14 pb-8 flex flex-col items-center">
+              <CabecalhoPrincipal titulo="Exterior" />
+
         </main>
     </div> 
   )

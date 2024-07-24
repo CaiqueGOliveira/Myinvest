@@ -21,6 +21,9 @@ import { FaMoneyBillWave } from "react-icons/fa";
 import { FaPercentage } from "react-icons/fa";
 
 const Carteira = () => {
+
+      const valoresEvolucaoCarteira = [2, 303, 704, 159, 290, 699]
+
       return (
             <div className='flex'>
                   <CabecalhoVertical />
@@ -43,6 +46,8 @@ const Carteira = () => {
                                                       width='w-full'
                                                       height='h-full max-h-[380px]'
                                                       bg='bg-zinc-50'
+                                                      marginTexto='mb-4'
+                                                      valores={valoresEvolucaoCarteira}
                                                 />
                                           </div>
 
@@ -104,22 +109,23 @@ const Carteira = () => {
                                     </div>
                                           
 
-                                    <div className='flex flex-col gap-4 w-[30%] h-full bg-zinc-50 p-4 rounded-md border-zinc-300 border-2'>
-                                          <div>
-                                                <h3 className='font-hind'>
+                                    <div className='flex flex-col gap-1 w-[30%] h-full bg-zinc-50 p-4 rounded-md border-zinc-300 border-2'>
+                                          <div className='w-full'>
+                                                <h3 className='font-hind font-semibold'>
                                                       Criptomoedas
                                                 </h3>
-                                                <p className='text-sm text-zinc-500'>
+
+                                                <p className='text-sm text-zinc-500 font-semibold'>
                                                       Cotações das principais moedas
                                                 </p>
                                           </div>
 
-                                          <div className='flex flex-col w-full h-full gap-2'>
-                                                <div className='w-full h-10 flex gap-2 items-center px-3 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
-                                                      <i className='w-6 h-6'>
+                                          <div className='w-full h-[90%] max-h-[464px] overflow-y-scroll scroll-smooth flex flex-col items-center gap-2 py-4'>
+                                                <div className='flex items-center gap-2 w-full h-10 px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
                                                             <img src={BitcoinIcon} alt="Bitcoin Icon"/>
                                                       </i>
-
+                                                      
                                                       <h3 className='font-hind font-semibold'>
                                                             Bitcoin R$: 360.000,00
                                                       </h3>
@@ -129,8 +135,8 @@ const Carteira = () => {
                                                       </i>
                                                 </div>
 
-                                                <div className='w-full h-10 flex gap-2 items-center px-3 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
-                                                      <i className='w-6 h-6'>
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
                                                             <img src={EtheriumIcon} alt="Etherium icon" />
                                                       </i>
 
@@ -143,8 +149,8 @@ const Carteira = () => {
                                                       </i>
                                                 </div>
 
-                                                <div className='w-full h-10 flex gap-2 items-center px-3 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
-                                                      <i className='w-6 h-6'>
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
                                                             <img src={MaticIcon} alt="Matic icon" />
                                                       </i>
 
@@ -157,8 +163,8 @@ const Carteira = () => {
                                                       </i>
                                                 </div>
 
-                                                <div className='w-full h-10 flex gap-2 items-center px-3 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
-                                                      <i className='w-6 h-6'>
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
                                                             <img src={ChainLinkIcon} alt="Matic icon" />
                                                       </i>
 
@@ -171,8 +177,8 @@ const Carteira = () => {
                                                       </i>
                                                 </div>
 
-                                                <div className='w-full h-10 flex gap-2 items-center px-3 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
-                                                      <i className='w-6 h-6'>
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
                                                             <img src={MakerDaoIcon} alt="Matic icon" />
                                                       </i>
 
@@ -185,8 +191,8 @@ const Carteira = () => {
                                                       </i>
                                                 </div>
 
-                                                <div className='w-full h-10 flex gap-2 items-center px-3 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
-                                                      <i className='w-6 h-6'>
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
                                                             <img src={UniswapIcon} alt="Matic icon" />
                                                       </i>
 
@@ -199,8 +205,8 @@ const Carteira = () => {
                                                       </i>
                                                 </div>
 
-                                                <div className='w-full h-10 flex gap-2 items-center px-3 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
-                                                      <i className='w-6 h-6'>
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
                                                             <img src={TetherIcon} alt="Matic icon" />
                                                       </i>
 
@@ -213,8 +219,8 @@ const Carteira = () => {
                                                       </i>
                                                 </div>
 
-                                                <div className='w-full h-10 flex gap-2 items-center px-3 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
-                                                      <i className='w-6 h-6'>
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
                                                             <img src={NtxIcon} alt="Matic icon" />
                                                       </i>
 
@@ -227,8 +233,134 @@ const Carteira = () => {
                                                       </i>
                                                 </div>
 
-                                                <div className='w-full h-10 flex gap-2 items-center px-3 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
-                                                      <i className='w-6 h-6'>
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
+                                                            <img src={DodgeCoinIcon} alt="Matic icon" />
+                                                      </i>
+
+                                                      <h3 className='font-hind font-semibold'>
+                                                            DodgeCoin R$: 0,7462 
+                                                      </h3>
+
+                                                      <i className='text-green-600 scale-110 flex ml-1'>
+                                                            <HiArrowTrendingUp /> <span className='ml-1 text-xs'>5%</span>
+                                                      </i>
+                                                </div>
+
+                                                <div className='flex items-center gap-2 w-full h-10 px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
+                                                            <img src={BitcoinIcon} alt="Bitcoin Icon"/>
+                                                      </i>
+                                                      
+                                                      <h3 className='font-hind font-semibold'>
+                                                            Bitcoin R$: 360.000,00
+                                                      </h3>
+
+                                                      <i className='text-green-600 scale-110 flex ml-1'>
+                                                            <HiArrowTrendingUp /> <span className='ml-1 text-xs'>10%</span>
+                                                      </i>
+                                                </div>
+
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
+                                                            <img src={EtheriumIcon} alt="Etherium icon" />
+                                                      </i>
+
+                                                      <h3 className='font-hind font-semibold'>
+                                                            Etherium R$: 19.800,00
+                                                      </h3>
+
+                                                      <i className='text-red-600 scale-110 flex ml-1'>
+                                                            <HiArrowTrendingDown /> <span className='ml-1 text-xs'>6%</span>
+                                                      </i>
+                                                </div>
+
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
+                                                            <img src={MaticIcon} alt="Matic icon" />
+                                                      </i>
+
+                                                      <h3 className='font-hind font-semibold'>
+                                                            Matic R$: 2,54
+                                                      </h3>
+
+                                                      <i className='text-green-600 scale-110 flex ml-1'>
+                                                            <HiArrowTrendingUp /> <span className='ml-1 text-xs'>2%</span>
+                                                      </i>
+                                                </div>
+
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
+                                                            <img src={ChainLinkIcon} alt="Matic icon" />
+                                                      </i>
+
+                                                      <h3 className='font-hind font-semibold'>
+                                                            ChainLink R$: 77,00
+                                                      </h3>
+
+                                                      <i className='text-red-600 scale-110 flex ml-1'>
+                                                            <HiArrowTrendingDown /> <span className='ml-1 text-xs'>1%</span>
+                                                      </i>
+                                                </div>
+
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
+                                                            <img src={MakerDaoIcon} alt="Matic icon" />
+                                                      </i>
+
+                                                      <h3 className='font-hind font-semibold'>
+                                                            MakerDao R$: 15.000,00
+                                                      </h3>
+
+                                                      <i className='text-green-600 scale-110 flex ml-1'>
+                                                            <HiArrowTrendingUp /> <span className='text-xs'>20%</span>
+                                                      </i>
+                                                </div>
+
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
+                                                            <img src={UniswapIcon} alt="Matic icon" />
+                                                      </i>
+
+                                                      <h3 className='font-hind font-semibold'>
+                                                            Uniswap R$: 44,71
+                                                      </h3>
+
+                                                      <i className='text-red-600 scale-110 flex ml-1'>
+                                                            <HiArrowTrendingDown /> <span className='ml-1 text-xs'>11%</span>
+                                                      </i>
+                                                </div>
+
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
+                                                            <img src={TetherIcon} alt="Matic icon" />
+                                                      </i>
+
+                                                      <h3 className='font-hind font-semibold'>
+                                                            Tether R$: 5,60
+                                                      </h3>
+
+                                                      <i className='text-green-600 scale-110 flex ml-1'>
+                                                            <HiArrowTrendingUp /> <span className='ml-1 text-xs'>5%</span>
+                                                      </i>
+                                                </div>
+
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
+                                                            <img src={NtxIcon} alt="Matic icon" />
+                                                      </i>
+
+                                                      <h3 className='font-hind font-semibold'>
+                                                            Ntx R$: 0,30
+                                                      </h3>
+
+                                                      <i className='text-red-600 scale-110 flex ml-1'>
+                                                            <HiArrowTrendingDown /> <span className='ml-1 text-xs'>28%</span>
+                                                      </i>
+                                                </div>
+
+                                                <div className='w-full h-10 flex gap-2 items-center px-3 py-2 rounded-md border-[1px] border-zinc-400 hover:bg-zinc-200 cursor-pointer'>
+                                                      <i className='w-8 h-8'>
                                                             <img src={DodgeCoinIcon} alt="Matic icon" />
                                                       </i>
 
