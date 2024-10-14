@@ -11,17 +11,17 @@ const CabecalhoVertical = () => {
   const navigate = useNavigate();
 
   return (
-      <header className="w-[15vw] max-w-[280px] h-screen bg-light py-10 flex flex-col items-center gap-10">
+      <header className="w-[15vw] max-w-[280px] h-screen py-10 flex flex-col items-center gap-10 border-r-[1px] bg-neutral-900 border-zinc-500">
             <h3 
-              className="text-xl font-hind font-semibold cursor-pointer"
+              className="text-xl text-white font-hind font-semibold cursor-pointer"
               onClick={() => {navigate('/')}}
             >
               MyInvesting
             </h3>
 
-            <div className="w-5/6 h-3/5 flex flex-col justify-center gap-2">
+            <div className="w-5/6 h-3/5 flex flex-col justify-center gap-3">
                   <p 
-                    className={`header-nav ${location == "/carteira" ? 'bg-primary text-white' : ''}`}
+                    className={`w-full h-12 flex items-center pl-3 rounded-lg cursor-pointer font-hind border-[1px] border-zinc-400 ${location == "/carteira" ? 'bg-neutral-100 text-black font-semibold border-none' : 'text-white'}`}
                     onClick={() => {navigate('/carteira')}}
                   >
                       <AiOutlineWallet />
@@ -29,7 +29,7 @@ const CabecalhoVertical = () => {
                   </p>
 
                   <p 
-                    className={`header-nav ${location == "/acoes" ? 'bg-primary text-white' : ''}`}
+                    className={`w-full h-12 flex items-center pl-3 rounded-lg cursor-pointer font-hind border-[1px] border-zinc-400 ${location == "/acoes" ? 'bg-neutral-100 text-black font-semibold border-none' : 'text-white'}`}
                     onClick={() => {navigate('/acoes')}}
                   >
                       <TbZoomMoney />
@@ -37,7 +37,7 @@ const CabecalhoVertical = () => {
                   </p>
 
                   <p 
-                    className={`header-nav ${location == "/fiis" ? 'bg-primary text-white' : ''}`}
+                    className={`w-full h-12 flex items-center pl-3 rounded-lg cursor-pointer font-hind border-[1px] border-zinc-400 ${location == "/fiis" ? 'bg-neutral-100 text-black font-semibold border-none' : 'text-white'}`}
                     onClick={() => {navigate('/fiis')}}
                   >
                       <TbBuildingCommunity />
@@ -45,7 +45,7 @@ const CabecalhoVertical = () => {
                   </p>
 
                   <p 
-                    className={`header-nav ${location == "/cripto" ? 'bg-primary text-white' : ''}`}
+                    className={`w-full h-12 flex items-center pl-3 rounded-lg cursor-pointer font-hind border-[1px] border-zinc-400 ${location == "/cripto" ? 'bg-neutral-100 text-black font-semibold border-none' : 'text-white'}`}
                     onClick={() => {navigate('/cripto')}}
                   >
                       <RiMoneyDollarCircleLine />
@@ -53,7 +53,7 @@ const CabecalhoVertical = () => {
                   </p>
 
                   <p 
-                    className={`header-nav ${location == "/rendafixa" ? 'bg-primary text-white' : ''}`}
+                    className={`w-full h-12 flex items-center pl-3 rounded-lg cursor-pointer font-hind border-[1px] border-zinc-400 ${location == "/rendafixa" ? 'bg-neutral-100 text-black font-semibold border-none' : 'text-white'}`}
                     onClick={() => {navigate('/rendafixa')}}
                   >
                      <TbPigMoney />
@@ -61,7 +61,7 @@ const CabecalhoVertical = () => {
                   </p>
 
                   <p 
-                    className={`header-nav ${location == "/exterior" ? 'bg-primary text-white' : ''}`}
+                    className={`w-full h-12 flex items-center pl-3 rounded-lg cursor-pointer font-hind border-[1px] border-zinc-400 ${location == "/exterior" ? 'bg-neutral-100 text-black font-semibold border-none' : 'text-white'}`}
                     onClick={() => {navigate('/exterior')}}
                   >
                       <MdTravelExplore />

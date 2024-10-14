@@ -1,6 +1,6 @@
-import CabecalhoPrincipal from "../../Components/CabecalhoPrincipal";
 import CabecalhoVertical from "../../Components/CabecalhoVertical";
 import Investimentos from "../../Components/Investimentos";
+import MainContainer from "../../Components/MainContainer";
 
 
 const Acoes = () => {
@@ -11,6 +11,7 @@ const Acoes = () => {
         codigo: 'BBAS3',
         preco: 'R$: 22,50',
         quantidade: 40,
+        variacao: "+5%",
         totalInvestido: 'R$: 900,00'
       },
       {
@@ -19,6 +20,7 @@ const Acoes = () => {
         codigo: 'KLBN3',
         preco: 'R$: 4,64',
         quantidade: 120,
+        variacao: "+5%",
         totalInvestido: 'R$: 558,00'
       },
       {
@@ -27,6 +29,7 @@ const Acoes = () => {
         codigo: 'BBAS3',
         preco: 'R$: 22,50',
         quantidade: 40,
+        variacao: "+5%",
         totalInvestido: 'R$: 900,00'
       },
       {
@@ -35,6 +38,7 @@ const Acoes = () => {
         codigo: 'KLBN3',
         preco: 'R$: 4,64',
         quantidade: 120,
+        variacao: "+5%",
         totalInvestido: 'R$: 558,00'
       },
       {
@@ -43,6 +47,7 @@ const Acoes = () => {
         codigo: 'BBAS3',
         preco: 'R$: 22,50',
         quantidade: 40,
+        variacao: "+5%",
         totalInvestido: 'R$: 900,00'
       },
       {
@@ -51,6 +56,7 @@ const Acoes = () => {
         codigo: 'KLBN3',
         preco: 'R$: 4,64',
         quantidade: 120,
+        variacao: "+25%",
         totalInvestido: 'R$: 558,00'
       },
       {
@@ -59,6 +65,7 @@ const Acoes = () => {
         codigo: 'BBAS3',
         preco: 'R$: 22,50',
         quantidade: 40,
+        variacao: "+53%",
         totalInvestido: 'R$: 900,00'
       },
       {
@@ -67,6 +74,7 @@ const Acoes = () => {
         codigo: 'KLBN3',
         preco: 'R$: 4,64',
         quantidade: 120,
+        variacao: "+12%",
         totalInvestido: 'R$: 558,00'
       },
       
@@ -78,16 +86,14 @@ const Acoes = () => {
       <div className='flex'>
           <CabecalhoVertical />
 
-          <main className="w-[85vw] h-screen bg-whiteLight px-14 pb-8 flex flex-col items-center">
-                <CabecalhoPrincipal titulo="Ações" />
-
+          <MainContainer titulo="Ações">
                 <Investimentos
                   titulo="em Ações" 
                   tipoDaPagina="Ação" 
                   listaAtivos={listaAcoes}
                   valoresEvolucaoCarteira={valoresEvolucaoCarteira}
                 />
-          </main>
+          </MainContainer>
       </div>
     )
 }

@@ -48,12 +48,16 @@ const GraficoCarteira = ({ width='w-full', height='h-1/2', bg='', marginTexto=''
           grid: {
             display: false,
           },
+          ticks: {
+            color: 'white',
+          }          
         },
         y: {
           grid: {
             display: false,
           },
           ticks: {
+            color: 'white',
             callback: function(value) {
               return `${value}k`;
             }
@@ -63,12 +67,12 @@ const GraficoCarteira = ({ width='w-full', height='h-1/2', bg='', marginTexto=''
     }
 
     return (
-        <div className={`${width} ${height} ${bg} flex-col rounded-md border-zinc-300 border-2 pt-4 px-4 min-h-[250px] shadow-md`}>
+        <div className={`${width} ${height} ${bg} text-white border-zinc-500 flex-col rounded-md border-[1px] pt-4 px-4 min-h-[250px]`}>
             <div className={`flex flex-col ${marginTexto}`}>
               <h3 className="font-semibold font-ptsans leading-3">
                 Progressão
               </h3>
-              <p className="text-sm font-semibold text-zinc-400">
+              <p className="text-sm font-semibold text-zinc-300">
                 Evolução mensal da carteira
               </p>
             </div>

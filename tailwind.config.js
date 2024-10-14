@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "planoFundo": "url('./public/banner.jpg')"
+        "planoFundo": "url('./src/assets/banner.jpg')"
       },
       dropShadow: {
         "low": "1px 0.5px 1.2px #717171"

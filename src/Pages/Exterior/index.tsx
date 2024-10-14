@@ -10,7 +10,8 @@ const Exterior = () => {
       nome: "Tesla", 
       codigo: "sei la", 
       preco: "R$: 120,00", 
-      quantidade: 20, 
+      quantidade: 20,
+      variacao: "+5%",
       totalInvestido: "R$: 2.400,00"
     },
     {
@@ -18,7 +19,8 @@ const Exterior = () => {
       nome: "Tesla", 
       codigo: "sei la", 
       preco: "R$: 120,00", 
-      quantidade: 20, 
+      quantidade: 20,
+      variacao: "+5%",
       totalInvestido: "R$: 2.400,00"
     },
     {
@@ -26,7 +28,8 @@ const Exterior = () => {
       nome: "Tesla", 
       codigo: "sei la", 
       preco: "R$: 120,00", 
-      quantidade: 20, 
+      quantidade: 20,
+      variacao: "+5%",
       totalInvestido: "R$: 2.400,00"
     },
     {
@@ -34,7 +37,8 @@ const Exterior = () => {
       nome: "Tesla", 
       codigo: "sei la", 
       preco: "R$: 120,00", 
-      quantidade: 20, 
+      quantidade: 20,
+      variacao: "+5%",
       totalInvestido: "R$: 2.400,00"
     },
     {
@@ -42,11 +46,41 @@ const Exterior = () => {
       nome: "Tesla", 
       codigo: "sei la", 
       preco: "R$: 120,00", 
-      quantidade: 20, 
+      quantidade: 20,
+      variacao: "+5%",
+      totalInvestido: "R$: 2.400,00"
+    },
+    {
+      id: 2, 
+      nome: "Tesla", 
+      codigo: "sei la", 
+      preco: "R$: 120,00", 
+      quantidade: 20,
+      variacao: "+5%",
+      totalInvestido: "R$: 2.400,00"
+    },
+    {
+      id: 3, 
+      nome: "Tesla", 
+      codigo: "sei la", 
+      preco: "R$: 120,00", 
+      quantidade: 20,
+      variacao: "+5%",
+      totalInvestido: "R$: 2.400,00"
+    },
+    {
+      id: 4, 
+      nome: "Tesla", 
+      codigo: "sei la", 
+      preco: "R$: 120,00", 
+      quantidade: 20,
+      variacao: "+5%",
       totalInvestido: "R$: 2.400,00"
     }
   ];
+
   const valoresEvolucaoCarteira = [2,2,4,2,9,2,22,2];
+  
   return (
     <div className='flex'>
         <CabecalhoVertical />

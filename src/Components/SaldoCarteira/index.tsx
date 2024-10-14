@@ -15,7 +15,7 @@ const SaldoCarteira = ({ bg='não', titulo, saldo='0,00', displaySaldo, setDispl
   
 
   return (
-    <div className={`${width} ${height} flex flex-col rounded-md border-2 border-zinc-200 shadow-md ${bg == 'sim' ? 'bg-blue-600 text-zinc-50' : 'bg-white'}`}>
+    <div className={`${width} ${height} flex flex-col rounded-md border-[1px] border-zinc-500 ${bg == 'sim' ? 'bg-neutral-100 text-black border-none' : 'bg-neutral-900 text-white'}`}>
             <div className='w-full h-1/2 flex justify-between p-4'>
                 <div className='h-full'>
                   <h3 className='text-base font-ptsans font-semibold'> 
