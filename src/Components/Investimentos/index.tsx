@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SaldoCarteira from "../SaldoCarteira";
 import GraficoCarteira from "../GraficoCarteira";
 import ListagemAtivos from "../ListagemAtivos";
@@ -25,9 +25,13 @@ type InvestimentosProps = {
       valoresEvolucaoCarteira: number[],
 }
 
-
 const Investimentos = ({ titulo, tipoDaPagina, listaAtivos, valoresEvolucaoCarteira }: InvestimentosProps) => {
       const [displaySaldo, setDisplaySaldo] = useState<'opacity-0' | 'opacity-100'>('opacity-0');
+      const [listaLength, setListaLength] = useState<number>(0);
+
+      useEffect(() => {
+            setListaLength(listaAtivos.length);
+      }, [listaAtivos])
 
       return (
             <section className="w-full h-[87%] max-w-7xl flex gap-4 pt-8">
@@ -54,6 +58,7 @@ const Investimentos = ({ titulo, tipoDaPagina, listaAtivos, valoresEvolucaoCarte
                         <ListagemAtivos
                               Titulo="Sua Carteira de ações"
                               tipoDaPagina={tipoDaPagina}
+                              listaLength={listaLength}
                         >
                               <thead>
                                     <tr>

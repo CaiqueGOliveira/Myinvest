@@ -53,19 +53,19 @@ const CabecalhoVertical = () => {
                   </p>
 
                   <p 
-                    className={`w-full h-12 flex items-center pl-3 rounded-lg cursor-pointer font-hind border-[1px] border-zinc-400 ${location == "/rendafixa" ? 'bg-neutral-100 text-black font-semibold border-none' : 'text-white'}`}
-                    onClick={() => {navigate('/rendafixa')}}
-                  >
-                     <TbPigMoney />
-                     <span className="ml-1">Renda Fixa</span>
-                  </p>
-
-                  <p 
                     className={`w-full h-12 flex items-center pl-3 rounded-lg cursor-pointer font-hind border-[1px] border-zinc-400 ${location == "/exterior" ? 'bg-neutral-100 text-black font-semibold border-none' : 'text-white'}`}
                     onClick={() => {navigate('/exterior')}}
                   >
                       <MdTravelExplore />
                       <span className="ml-1">Exterior</span>
+                  </p>
+
+                  <p 
+                    className={`w-full h-12 flex items-center pl-3 rounded-lg cursor-pointer font-hind border-[1px] border-zinc-400 ${location == "/rendafixa" ? 'bg-neutral-100 text-black font-semibold border-none' : 'text-white'}`}
+                    onClick={() => {navigate('/rendafixa')}}
+                  >
+                     <TbPigMoney />
+                     <span className="ml-1">Renda Fixa</span>
                   </p>
             </div>
       </header>

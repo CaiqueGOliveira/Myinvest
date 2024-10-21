@@ -1,6 +1,6 @@
-import CabecalhoPrincipal from "../../Components/CabecalhoPrincipal";
 import CabecalhoVertical from "../../Components/CabecalhoVertical";
 import Investimentos from "../../Components/Investimentos";
+import MainContainer from "../../Components/MainContainer";
 
 const Exterior = () => {
 
@@ -85,16 +85,14 @@ const Exterior = () => {
     <div className='flex'>
         <CabecalhoVertical />
 
-        <main className="w-[85vw] h-screen bg-whiteLight px-14 pb-8 flex flex-col items-center">
-              <CabecalhoPrincipal titulo="Exterior" />
-
+        <MainContainer titulo="Exterior">
               <Investimentos
                 titulo="no Exterior" 
                 tipoDaPagina="Ação" 
                 listaAtivos={listaAcoes}
                 valoresEvolucaoCarteira={valoresEvolucaoCarteira}
               />
-        </main>
+        </MainContainer>
     </div>
   )
 }

@@ -1,5 +1,5 @@
-import CabecalhoPrincipal from "../../Components/CabecalhoPrincipal";
 import CabecalhoVertical from "../../Components/CabecalhoVertical";
+import MainContainer from "../../Components/MainContainer";
 
 
 const RendaFixa = () => {
@@ -7,10 +7,11 @@ const RendaFixa = () => {
     <div className='flex'>
         <CabecalhoVertical />
 
-        <main className="w-[85vw] h-screen bg-whiteLight px-14 pb-8 flex flex-col items-center">
-              <CabecalhoPrincipal titulo="Exterior" />
+        <MainContainer titulo="Exterior">
+          <section className="w-full h-[87%] max-w-7xl flex gap-4 pt-8">
 
-        </main>
+          </section>
+        </MainContainer>
     </div> 
   )
 }
