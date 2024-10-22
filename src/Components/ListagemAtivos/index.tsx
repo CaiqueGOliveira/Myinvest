@@ -22,7 +22,7 @@ const ListagemAtivos = ({Titulo, children, tipoDaPagina, listaLength }: ListaPro
       };
 
       return (
-            <div className="w-full h-2/3 rounded-md border-1 text-white bg-neutral-900 border-zinc-500 flex flex-col px-4 py-6 gap-4">
+            <div className="w-full h-full rounded-md border-1 text-white bg-neutral-900 border-zinc-500 flex flex-col px-3 py-3 gap-4">
                   <div className="flex justify-between items-center">
                         <h3 className="font-semibold font-ptsans">{Titulo}</h3>
 

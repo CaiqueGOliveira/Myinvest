@@ -3,6 +3,7 @@ import CabecalhoVertical from "../../Components/CabecalhoVertical";
 import Investimentos from "../../Components/Investimentos";
 import MainContainer from "../../Components/MainContainer";
 import axios from "axios";
+import NavegacaoFerramentas from "../../Components/NavegacaoFerramentas";
 
 interface listaAcoesObj {
   id: number,
@@ -33,7 +34,7 @@ const Acoes = () => {
       <div className='flex'>
           <CabecalhoVertical />
 
-          <MainContainer titulo="Ações">
+          <MainContainer titulo="Ações" component={<NavegacaoFerramentas />}>
                 <Investimentos
                   titulo="em Ações" 
                   tipoDaPagina="Ação" 

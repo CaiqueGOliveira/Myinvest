@@ -1,0 +1,15 @@
+.deita {
+    transform: rotate(0deg) !important;
+}
+
+.levanta {
+    transform: (rotate(-90deg)) !important;
+}
+
+.slideLeft {
+    transform: translateX(-580px);
+}
+
+.slideRight {
+    transform: translateX(0px);
+}
